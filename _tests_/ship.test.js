@@ -1,16 +1,11 @@
 /* globals describe it expect */
 
 const { Ship } = require('../src/Ship.js');
-const { Port } = require('../src/Ship.js');
-const { Itinerary } = require('../src/Ship.js');
 
 describe('with ports and an itinerary', () => {
     let ship;
-    let dover;
-    let calais;
-    let itinerary;
+    let port = jest.fn();
 
-    let port;
     beforeEach(() => {
         port = {
             removeShip: jest.fn(),
@@ -29,8 +24,12 @@ describe('with ports and an itinerary', () => {
             ships: []
         };
 
-        itinerary = new Itinerary([dover, calais]);
+        itinerary = {
+            ports: [dover, calais]
+        };
+
         ship = new Ship(itinerary);
+
     });
 
     it('can be instantiated', () => {

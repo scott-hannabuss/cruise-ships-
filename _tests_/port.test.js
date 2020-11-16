@@ -1,4 +1,4 @@
-/* globals describe it expect */
+e /* globals describe it expect */
 
 const { Port } = require('../src/Ship.js');
 
