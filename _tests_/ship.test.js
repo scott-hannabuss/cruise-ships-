@@ -1,6 +1,6 @@
 /* globals describe it expect */
 
-const { Ship } = require('../src/Ship.js');
+const Ship = require('../src/Ship.js');
 
 describe('with ports and an itinerary', () => {
     let ship;
@@ -63,6 +63,5 @@ describe('with ports and an itinerary', () => {
     it('gets added to port on instantiation', () => {
         expect(port.addShip).toHaveBeenCalledWith(ship);
     });
-
 })
 

@@ -1,6 +1,6 @@
 /* globals describe it expect */
 
-const { Itinerary } = require('../src/Ship.js');
+const Itinerary = require('../src/Itinerary.js');
 
 describe('with ports and an itinerary', () => {
     let dover = jest.fn();

@@ -1,6 +1,6 @@
-e /* globals describe it expect */
+/* globals describe it expect */
 
-const { Port } = require('../src/Ship.js');
+const Port = require('../src/Port.js');
 
 describe('with ports and an itinerary', () => {
     let ship = jest.fn();
@@ -17,6 +17,7 @@ describe('with ports and an itinerary', () => {
     });
 
     it('has a name which can be altered', () => {
+        const port = new Port('Dover');
         expect(port.name).toBe('Dover');
     });
 
