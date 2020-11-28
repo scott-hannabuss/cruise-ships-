@@ -1,6 +1,6 @@
 <h1> Javascript Cruise Ships </h1>
 
-<img src="cruise-ships-screenshot.pdf" alt ="A screenshot of the project">
+<img src="cruise-ships-screenshot.xcf" alt ="A screenshot of the project">
 
 <p>A project created as part of Manchester Codes. The code simulates cruise ships sailing and docking from port to port. The project also has a GUI which displays these actions. The project was designed as an overview on the core concepts of Object-Oriented Programming.<p>
 
