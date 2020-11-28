@@ -87,7 +87,7 @@
     Controller.prototype.createDisplay = function () {
         const ship = this.ship;
         const portIndex = ship.itinerary.ports.indexOf(ship.currentPort);
-        const nextPort = ship.itinerary.ports.indexOf(ship.currentPort) + 1;
+       const nextPort = ship.itinerary.ports.indexOf(ship.currentPort) + 1;
         const nextPortElement = document.getElementById('nextPort');
         if (portIndex < ship.itinerary.ports.length - 1) {
             console.log(ship.itinerary.ports.length);
