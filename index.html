@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <div id="display">
+        <p id="nextPort"></p>
+    </div>
     <div id="viewport">
         <div id="ports"></div>
         <div id="ship"></div>
@@ -34,6 +37,8 @@
 
         controller.renderPorts(itinerary.ports)
         controller.renderShip(ship);
+
+        controller.createDisplay();
 
     </script>
 </body>

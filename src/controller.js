@@ -3,7 +3,7 @@
         this.ship = ship;
         this.initialiseSea();
         document.querySelector('#sailbutton').addEventListener('click', () => {
-            this.setSail()
+            this.setSail();
         });
     }
 
@@ -45,30 +45,32 @@
     };
 
     Controller.prototype.setSail = function () {
+        this.createDisplay();
         const ship = this.ship
         const currentPortIndex = ship.itinerary.ports.indexOf(ship.currentPort);
         const nextPortIndex = currentPortIndex >= 0 ? currentPortIndex + 1 : undefined;
         const nextPortElement = document.querySelector(`[data-port-index='${nextPortIndex}']`);
         const isLastPort = currentPortIndex === ship.itinerary.ports.length - 1;
         if (!nextPortElement || isLastPort) {
-            return alert('End of the line!');
+            this.renderMessage('You have reached the end of the line')
         }
-        this.renderMessage(`Now departing ${ship.currentPort.name}`);
+        else {
+            this.renderMessage(`Now departing ${ship.currentPort.name}`);
 
-        const shipElement = document.querySelector('#ship');
-        const sailInterval = setInterval(() => {
-            const shipLeft = parseInt(shipElement.style.left, 10);
-            if (shipLeft === (nextPortElement.offsetLeft - 32)) {
-                ship.setSail();
-                ship.dock();
-                this.renderMessage(`Docked at ${ship.currentPort.name}`);
-                clearInterval(sailInterval);
-            }
+            const shipElement = document.querySelector('#ship');
+            const sailInterval = setInterval(() => {
+                const shipLeft = parseInt(shipElement.style.left, 10);
+                if (shipLeft === (nextPortElement.offsetLeft - 32)) {
+                    ship.setSail();
+                    ship.dock();
+                    this.renderMessage(`Docked at ${ship.currentPort.name}`);
+                    clearInterval(sailInterval);
+                }
 
-            shipElement.style.left = `${shipLeft + 1}px`;
-        }, 20);
-    };
-
+                shipElement.style.left = `${shipLeft + 1}px`;
+            }, 20);
+        };
+    }
     Controller.prototype.renderMessage = function (message) {
         const messageElement = document.createElement('div');
         messageElement.id = 'message';
@@ -80,6 +82,19 @@
         setTimeout(() => {
             viewport.removeChild(messageElement);
         }, 2000);
+    }
+
+    Controller.prototype.createDisplay = function () {
+        const ship = this.ship;
+        const portIndex = ship.itinerary.ports.indexOf(ship.currentPort);
+        const nextPort = ship.itinerary.ports.indexOf(ship.currentPort) + 1;
+        const nextPortElement = document.getElementById('nextPort');
+        if (portIndex < ship.itinerary.ports.length - 1) {
+            console.log(ship.itinerary.ports.length);
+            nextPortElement.innerHTML = `Next Destination: ${ship.itinerary.ports[nextPort].name}`;
+        } else {
+            nextPortElement.innerHTML = 'This is the final destination.';
+        }
     }
 
     if (typeof module !== 'undefined' && module.exports) {
