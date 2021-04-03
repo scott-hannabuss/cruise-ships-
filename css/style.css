@@ -1,87 +1,87 @@
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 body {
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #viewport {
-    width: 640px;
-    height: 256px;
-    position: relative;
-    overflow-x: auto;
-    overflow-y: hidden; 
-    background-image: url('../images/images/water0.png');
-  }
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#viewport {
+  width: 640px;
+  height: 256px;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-image: url("../images/images/water0.png");
+}
 
-  #ports {
-    margin-top: 96px;
-    display: flex;
-    margin-bottom: 70px; 
-    justify-content: space-around;
-  }
+#ports {
+  margin-top: 96px;
+  display: flex;
+  margin-bottom: 70px;
+  justify-content: space-around;
+}
 
-  #ports > .port {
-    width: 64px;
-    height: 32px;
-    background-image: url('../images/images/port.png');
-  }
+#ports > .port {
+  width: 64px;
+  height: 32px;
+  background-image: url("../images/images/port.png");
+}
 
-  #ship {
-    width: 128px;
-    height: 64px;
-    background-image: url('../images/images/ship.png');
-    position: absolute;
-  }
-  #sailbutton {
-    border: 0;
-    background-color: #FB3640;
-    border-bottom: 4px solid #d8040f;
-    color: white;
-    font-family: inherit;
-    padding: 10px 20px;
-    bottom: 0;
-    position: sticky; 
-    left: 0;
-    width: 100%;
-    text-align: center; 
-    font-family: 'Press Start 2P', cursive;
-  }
+#ship {
+  width: 128px;
+  height: 64px;
+  background-image: url("../images/images/ship.png");
+  position: absolute;
+}
+#sailbutton {
+  border: 0;
+  background-color: #fb3640;
+  border-bottom: 4px solid #d8040f;
+  color: white;
+  font-family: inherit;
+  padding: 20px 10px;
+  position: sticky;
+  margin-bottom: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+}
 
-  #sailbutton:focus {
-    background-color: #d8040f;
-    border-bottom-width: 0;
-    padding-top: 14px;
-  }
+#sailbutton:focus {
+  background-color: #d8040f;
+  border-bottom-width: 0;
+  padding-top: 20px;
+}
 
-  #message {
-    padding: 16px;
-    font-family: 'Press Start 2P', cursive;
-    position: sticky;
-    width: 100%;
-    bottom: 0;
-    left: 0; 
-    text-align: center; 
-    border-top: 3px solid black;
-    background-color: white;
-  }
+#message {
+  padding: 20px;
+  font-family: "Press Start 2P", cursive;
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  border-top: 3px solid black;
+  background-color: white;
+}
 
-  #display {
-    display: flex;
-    color: white;
-    top: 0;
-    right: 0;
-    position: absolute;
-    flex-direction: column;
-    margin: 10px;
-    border: 5px solid white; 
-    padding: 20px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 2-px;
-    width: 300px;
-    text-align: left;
-  }
-
-  
+#display {
+  display: flex;
+  color: white;
+  top: 0;
+  right: 0;
+  position: absolute;
+  flex-direction: column;
+  margin: 10px;
+  border: 5px solid white;
+  padding: 20px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 2-px;
+  width: 300px;
+  text-align: left;
+}
