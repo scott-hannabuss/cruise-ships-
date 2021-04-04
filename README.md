@@ -20,7 +20,7 @@ The GUI has a changing sea animation background, to make it appear as if the wav
 
 <h1> Technologies </h1>
 
-<p> The project utilised several technologies including Javascipt, Jest and Node. </p>
+<p> The project utilised several technologies including Javascript, Jest and Node. </p>
 
 <h1> Project Status </h1>
 
