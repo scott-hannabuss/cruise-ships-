@@ -2,7 +2,7 @@
 
 <img src="cruise-ships-screenshot.png" alt ="A screenshot of the project">
 
-<p>A project created as part of Manchester Codes. The code simulates cruise ships sailing and docking from port to port. The project also has a GUI which displays these actions. The project was designed as an overview on the core concepts of Object-Oriented Programming.<p>
+<p>A project that simulates cruise ships sailing and docking from port to port, with an interactive GUI which also displays these actions. The project utilises many of the core concepts of Object-Oriented Programming.<p>
 
 <h1> Running this project </h1>
 
@@ -10,7 +10,7 @@
 
 Now run node.js inside the repo to install the project dependencies, including Jest which will allow you to run and write tests for the project. If you would like to run the project's GUI, simply open the file index.html inside your browser
 
-Alternatively, if you would like to view the project through github pages you can do so at https://scott-hannabuss.github.io/cruise-ships-/</p>
+Alternatively, if you would like to view the GUI through github pages you can do so at https://scott-hannabuss.github.io/cruise-ships-/</p>
 
 <h1> Project Features </h1>
 
